@@ -3,48 +3,60 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>TV Lite — About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="top-banner">
-    Browse All <span class="highlighted-text">TV Shows</span>
-  </div>
-  <nav>
-    <div class="navbar">
-      <div class="logo">TV Shows</div>
-      <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="shows.html">Shows</a>
-        <a class="current" href="about.html">About</a>
-        <a href="support.html">Support</a>
-      </div>
-    </div>
-  </nav>
+<body class="bg-dark text-light">
 
-  <main class="container section">
-    <h1 class="title-decor">about website TV Shows</h1>
-    <div class="panel" style="margin-top:12px">
-      <p>We love tidy UI and quick discovery. Minimal pages, maximum clarity.</p>
-      <ul>
-        <li>Readable, focused layout</li>
-        <li>Two photos on Home, more team photos here</li>
-        <li>Fast to publish for assignments</li>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#111;border-bottom:2px solid #6a0297;">
+  <div class="container-fluid px-sm-2">
+    <a class="navbar-brand" href="#">TV Shows</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shows.html">Shows</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
       </ul>
     </div>
+  </div>
+</nav>
 
-     <section class="section" style="display:grid;gap:28px">
-      <div style="text-align:center">
-        <img src="5332749631324553378.jpg" alt="Team member 1" style="width:220px;border-radius:12px">
-        <p class="lead" style="margin-top:8px"><strong>Baimen Ali</strong> creator of pages such as home and also shows</p>
+<main class="container mt-5">
+  <h1 class="title-decor mb-4">About TV Lite</h1>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="p-3 bg-dark border-purple rounded">
+        <p>We love tidy UI and quick discovery. Minimal pages, maximum clarity.</p>
+        <ul>
+          <li>Readable, focused layout</li>
+          <li>Two photos on Home, more team photos here</li>
+          <li>Fast to publish for assignments</li>
+        </ul>
       </div>
-
-      <div style="text-align:center">
-        <img src="5366070009081755819.jpg" alt="Team member 2" style="width:220px;border-radius:12px">
-        <p class="lead" style="margin-top:8px"><strong>Yerbolatov Damir</strong>-creator of about us and support pages.</p>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="row g-4">
+        <div class="col-lg-6 text-center">
+          <img src="5332749631324553378.jpg" class="img-fluid rounded">
+          <p class="mt-2"><strong>Baimen Ali</strong><br>Created home and shows pages</p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="5366070009081755819.jpg" class="img-fluid rounded">
+          <p class="mt-2"><strong>Yerbolatov Damir</strong><br>Created about and support pages</p>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
+</main>
 
-  <footer class="container">c 2025 TV Lite • SE-2409</footer>
+<footer class="container-fluid text-center py-3 border-top border-purple mt-5">
+  <p>© 2025 TV Lite • SE-2409</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
