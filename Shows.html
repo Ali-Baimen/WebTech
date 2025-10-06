@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>TV Shows</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TV Lite — Shows</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<body>
+<body class="bg-dark text-light">
 
-  <div id="top-banner">
-    Browse All <span class="highlighted-text">TV Shows</span>
-  </div>
-
-  <nav class="nav-bar">
-    <div class="nav-inner">
-      <div class="site-logo">TV Shows</div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="shows.html" class="active">Shows</a>
-        <a href="about.html">About</a>
-        <a href="support.html">Support</a>
-      </div>
+ <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#111;border-bottom:2px solid #6a0297;">
+  <div class="container-fluid px-sm-2">
+    <a class="navbar-brand text-purple" href="#">TV Shows</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="shows.html">Shows</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <section class="page-container">
     <h1>All Shows</h1>
@@ -105,36 +107,12 @@
       </div>
     </div>
   </section>
-<section class="container my-5">
-  <h2 class="title-decor mb-4">Media Query Cards</h2>
-  <div class="mq-card-group">
-    <div class="mq-card">
-      <img src="stranger-things-season-1-key-art.webp" alt="">
-      <div class="mq-card-content">
-        <h3>Card One</h3>
-        <p>Responsive layout adjusts 3-2-1 using media queries only.</p>
-      </div>
-    </div>
-    <div class="mq-card">
-      <img src="brbad.webp" alt="">
-      <div class="mq-card-content">
-        <h3>Card Two</h3>
-        <p>On mobile, each card stacks vertically for readability.</p>
-      </div>
-    </div>
-    <div class="mq-card">
-      <img src="got.webp" alt="">
-      <div class="mq-card-content">
-        <h3>Card Three</h3>
-        <p>On tablet, two cards fit per row smoothly.</p>
-      </div>
-    </div>
-  </div>
-</section>
+
 
   <footer class="footer-section">
     <p>&copy; 2025 TV Shows. All rights reserved.</p>
   </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
