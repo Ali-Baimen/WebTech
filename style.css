@@ -1,3 +1,16 @@
+:root {
+  --bg-color-1: #0d0d0d;   /* default dark */
+  --bg-color-2: #1a3c1a;   /* dark green */
+  --bg-color-3: #228B22;   /* forest green */
+  --bg-color-4: #32CD32;   /* lime */
+  --bg-color-5: #FFD700;   /* gold */
+  --bg-color-6: #FFF44F;   /* yellow */
+  --current-bg: var(--bg-color-1);
+}
+
+body { background-color: var(--bg); transition: background-color 0.8s ease; }
+body.bg-dark { background-color: var(--bg) !important; }
+
 body {
   background-color: #0d0d0d;
   font-family: Arial, Helvetica, sans-serif;
@@ -9,6 +22,8 @@ body {
   line-height: 1.6;
   text-align: center;
 }
+
+
 
 p {
   line-height: 1.6;
@@ -602,3 +617,5 @@ body.bg-dark{background-color:#0d0d0d!important;color:#e0e0e0!important;}
 .navbar-dark .navbar-nav .nav-link{color:#bfbfbf;}
 .navbar-dark .navbar-nav .nav-link:hover{color:#bb86fc;}
 .navbar-dark .navbar-nav .nav-link.active{color:#ffffff;border-bottom:2px solid #6a0297;}
+/* JS Task 1 CSS */
+.is-invalid { border-color: #dc3545 !important; }
