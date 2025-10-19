@@ -1,29 +1,24 @@
 :root {
-  --bg-color-1: #0d0d0d;   /* default dark */
-  --bg-color-2: #1a3c1a;   /* dark green */
-  --bg-color-3: #228B22;   /* forest green */
-  --bg-color-4: #32CD32;   /* lime */
-  --bg-color-5: #FFD700;   /* gold */
-  --bg-color-6: #FFF44F;   /* yellow */
-  --current-bg: var(--bg-color-1);
+  --bg-color-1: #0d0d0d;    /* dark */
+  --bg-color-2: #1a3c1a;    /* forest green */
+  --bg-color-3: #228B22;    /* medium green */
+  --bg-color-4: #32CD32;    /* lime green */
+  --bg-color-5: #FFD700;    /* gold */
+  --bg-color-6: #FFF44F;    /* bright yellow */
+  --bg: var(--bg-color-1);  /* start with dark */
 }
-
-body { background-color: var(--bg); transition: background-color 0.8s ease; }
-body.bg-dark { background-color: var(--bg) !important; }
 
 body {
-  background-color: #0d0d0d;
+  background-color: var(--bg);
+  color: #e0e0e0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  color: #e0e0e0;
   line-height: 1.6;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.8s ease, color 0.5s ease;
 }
-
-
 
 p {
   line-height: 1.6;
@@ -599,10 +594,7 @@ footer a:hover {
   background-color: rgba(106, 2, 151, 0.85) !important;
   transform: scale(1.05);
 }
-body.bg-dark {
-  background-color: #0d0d0d !important;
-  color: #e0e0e0 !important;
-}
+
 
 .navbar-dark {
   background-color: #111 !important;
@@ -613,9 +605,10 @@ body.bg-dark {
   background-color: #1a1a1a !important;
   border-color: #6a0297 !important;
 }
-body.bg-dark{background-color:#0d0d0d!important;color:#e0e0e0!important;}
+
 .navbar-dark .navbar-nav .nav-link{color:#bfbfbf;}
 .navbar-dark .navbar-nav .nav-link:hover{color:#bb86fc;}
 .navbar-dark .navbar-nav .nav-link.active{color:#ffffff;border-bottom:2px solid #6a0297;}
 /* JS Task 1 CSS */
 .is-invalid { border-color: #dc3545 !important; }
+

@@ -227,3 +227,193 @@ document.addEventListener("DOMContentLoaded", () => {
   updateDateTime();
   setInterval(updateDateTime, 1000);
 });
+//Task-1 Assigment-6
+document.addEventListener("DOMContentLoaded", () => {
+  const stars = document.querySelectorAll(".star");
+  const msg = document.getElementById("ratingMessage");
+
+  if (!stars.length) return;
+
+  stars.forEach(star => {
+    star.style.fontSize = "40px";
+    star.style.color = "#777";
+    star.style.cursor = "pointer";
+    star.style.margin = "5px";
+    star.style.transition = "color 0.3s ease, transform 0.2s ease";
+
+    star.addEventListener("mouseover", () => {
+      star.style.transform = "scale(1.2)";
+    });
+    star.addEventListener("mouseout", () => {
+      star.style.transform = "scale(1)";
+    });
+
+    star.addEventListener("click", () => {
+      const value = parseInt(star.dataset.value);
+      stars.forEach((s, i) => {
+        s.classList.toggle("bi-star", i >= value);
+        s.classList.toggle("bi-star-fill", i < value);
+        s.style.color = i < value ? "#bb86fc" : "#777";
+      });
+      msg.textContent = `You rated us ${value} star${value > 1 ? "s" : ""}!`;
+      msg.style.color = "#bb86fc";
+      msg.style.fontWeight = "bold";
+    });
+  });
+});
+//Task -2 Assignment - 6
+document.addEventListener("DOMContentLoaded", () => {
+  const timeBtn = document.getElementById("timeBtn");
+  const timeDisplay = document.getElementById("timeDisplay");
+  if (!timeBtn || !timeDisplay) return;
+
+  let intervalId = null;
+
+  timeBtn.addEventListener("click", () => {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+      timeBtn.textContent = "Show Live Time";
+      timeDisplay.textContent = "";
+      return;
+    }
+    function updateTime() {
+      const now = new Date().toLocaleTimeString();
+      timeDisplay.textContent = now;
+    }
+
+    updateTime();
+    intervalId = setInterval(updateTime, 1000); 
+    timeBtn.textContent = "Stop Clock";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  if (!navLinks.length) return;
+
+  let currentIndex = 0;
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") {
+      currentIndex = (currentIndex + 1) % navLinks.length;
+      navLinks[currentIndex].focus();
+    } else if (e.key === "ArrowLeft") {
+      currentIndex = (currentIndex - 1 + navLinks.length) % navLinks.length;
+      navLinks[currentIndex].focus();
+    }
+  });
+});
+
+//Greetings of day time
+document.addEventListener("DOMContentLoaded", () => {
+  const greeting = document.getElementById("greeting");
+  if (!greeting) return;
+
+  const hour = new Date().getHours();
+  let message;
+
+  switch (true) {
+    case (hour >= 5 && hour < 12):
+      message = "Good Morning , welcome to TV Lite!";
+      break;
+    case (hour >= 12 && hour < 18):
+      message = "Good Afternoon , enjoy your shows!";
+      break;
+    case (hour >= 18 && hour < 22):
+      message = "Good Evening , relax with your favorite series!";
+      break;
+    default:
+      message = "Good Night , time for some late-night TV!";
+  }
+
+  greeting.textContent = message;
+});
+//JAVASCRIPT ADVANCED CONCEPTS
+
+//OBJECTS AND METHODS
+document.addEventListener("DOMContentLoaded", () => {
+  const appInfo = {
+    name: "TV Shows",
+    version: "1.0",
+    authors: ["Ali", "Damir"],
+    getInfo() {
+      return `${this.name} v${this.version} — Created by ${this.authors.join(" & ")}`;
+    }
+  };
+
+  const infoBox = document.createElement("div");
+  infoBox.className = "text-center mt-4";
+  infoBox.style.color = "#bb86fc";
+  infoBox.textContent = appInfo.getInfo();
+  document.body.appendChild(infoBox);
+});
+
+
+//ARRAYS AND LOOPS
+document.addEventListener("DOMContentLoaded", () => {
+  const genres = ["Action", "Comedy", "Drama", "Fantasy", "Sci-Fi", "Mystery"];
+  const genreContainer = document.createElement("div");
+  genreContainer.className = "text-center mt-4";
+
+  const title = document.createElement("h4");
+  title.textContent = "Popular Genres:";
+  title.style.color = "#bb86fc";
+  genreContainer.appendChild(title);
+
+  const list = document.createElement("ul");
+  list.className = "list-unstyled";
+
+  for (let i = 0; i < genres.length; i++) {
+    const li = document.createElement("li");
+    li.textContent = `🎬 ${genres[i]}`;
+    li.style.color = "#bb86fc";
+    list.appendChild(li);
+  }
+
+  genreContainer.appendChild(list);
+  document.body.appendChild(genreContainer);
+});
+
+
+//HIGHER-ORDER FUNCTION 
+document.addEventListener("DOMContentLoaded", () => {
+  const shows = ["Stranger Things", "Breaking Bad", "Friends", "The Witcher"];
+  const upperShows = shows.map(show => show.toUpperCase());
+
+  console.log("Uppercase Shows:", upperShows);
+
+  const mappedContainer = document.createElement("div");
+  mappedContainer.className = "text-center mt-4";
+  mappedContainer.style.color = "#bb86fc";
+  mappedContainer.innerHTML = `<strong>Mapped Show Titles:</strong><br>${upperShows.join(" • ")}`;
+  document.body.appendChild(mappedContainer);
+});
+
+
+//PLAY SOUND
+document.addEventListener("DOMContentLoaded", () => {
+  const soundFile = "click.mp3";
+  const sound = new Audio(soundFile);
+  const bgBtn = document.getElementById("colorBtn");
+  if (bgBtn) {
+    bgBtn.addEventListener("click", () => {
+      sound.play().catch(err => console.log("Audio playback failed:", err));
+    });
+  }
+});
+
+
+//ANIMATION (simple hover animation for all cards)
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".show-card, .card");
+  cards.forEach(card => {
+    card.style.transition = "transform 0.3s ease";
+    card.addEventListener("mouseover", () => {
+      card.style.transform = "scale(1.05)";
+    });
+    card.addEventListener("mouseout", () => {
+      card.style.transform = "scale(1)";
+    });
+  });
+});
